@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bubblegum-sans-regular {
+	font-family: "Bubblegum Sans", sans-serif;
+	font-style: normal;
+}
+.yellowtail-regular {
+	font-family: "Yellowtail", cursive;
+	font-style: normal;
+}
+.lemon-regular {
+	font-family: "Lemon", serif;
+	font-style: normal;
+}
+.sofia-regular {
+	font-family: "Sofia", cursive;
+	font-style: normal;
+}
+.vt323-regular {
+	font-family: "VT323", monospace;
+	font-style: normal;
+}
+.my-retro {
+	font-family: 'Press Start 2P', cursive;
+	font-style: normal;
+}
+
+.my-outline-w {
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+}
+.my-outline-b {
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+}
+.my-bold {
+	font-size: 1.6rem;
+	font-weight: 500;
+	font-family: "Lemon", serif;
+}
