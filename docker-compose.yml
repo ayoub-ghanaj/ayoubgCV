@@ -1,0 +1,29 @@
+services:
+   noor1:
+      container_name: noor1
+      restart: unless-stopped
+      image: noor:0.1.0
+
+   noordemo1:
+      container_name: noordemo1
+      restart: unless-stopped
+      image: noordemo1:0.1.0
+
+   cv:
+      container_name: cv
+      restart: unless-stopped
+      image: cv:0.0.1
+
+   nginx:
+      container_name: nginx
+      restart: unless-stopped
+      image: nginx
+      ports:
+         - 80:80
+         - 443:443
+      volumes:
+         - ./nginx/noorumrah.com.sa.pem:/etc/noorumrah.com.sa.pem
+         - ./nginx/noorumrah.com.sa.privkey.pem:/etc/noorumrah.com.sa.privkey.pem
+         - ./nginx/demo-system.top.pem:/etc/demo-system.top.pem
+         - ./nginx/demo-system.top.privkey.pem:/etc/demo-system.top.privkey.pem
+         - ./nginx/nginx.conf:/etc/nginx/nginx.conf
