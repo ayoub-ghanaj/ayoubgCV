@@ -13,16 +13,16 @@ export const siteConfig = {
     //   href: "/ed",
     // },
     {
-      label: "Projects",
-      href: "/pr",
+      label: "Time Line",
+      href: "/tl",
     },
     {
       label: "About",
       href: "/about",
     },
     {
-      label: "Coming Soon",
-      href: "/app",
+      label: "Blog",
+      href: "/blog",
     },
     {
       label: "Contact",
@@ -39,16 +39,16 @@ export const siteConfig = {
     //   href: "/ed",
     // },
     {
-      label: "Projects",
-      href: "/pr",
+      label: "Time Line",
+      href: "/tl",
     },
     {
       label: "About",
       href: "/about",
     },
     {
-      label: "Coming Soon",
-      href: "/app",
+      label: "Blog",
+      href: "/blog",
     },
     {
       label: "Contact",

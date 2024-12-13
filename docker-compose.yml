@@ -2,7 +2,7 @@ services:
    noor1:
       container_name: noor1
       restart: unless-stopped
-      image: noor:0.1.0
+      image: noor:0.1.1
 
    noordemo1:
       container_name: noordemo1

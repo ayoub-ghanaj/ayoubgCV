@@ -11,8 +11,8 @@ export function Floating_Nav() {
       icon: <HomeIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Projects",
-      link: "/pr",
+      name: "Blog",
+      link: "/blog",
       icon: <ProjectsIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
@@ -21,8 +21,8 @@ export function Floating_Nav() {
       icon: <AboutIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Coming Soon",
-      link: "/app",
+      name: "Blog",
+      link: "/blog",
       icon: <SoonIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {

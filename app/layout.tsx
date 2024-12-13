@@ -4,7 +4,7 @@ import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
@@ -63,6 +63,7 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-LJ669P4SBH" />
     </html>
   );
 }

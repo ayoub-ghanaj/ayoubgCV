@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import { FlipWords } from "@/components/ui/flip-words";
 import { SkillsSection } from "@/components/home/skillz";
 import { ToolsSection } from "@/components/home/tools";
-import { InfiniteMovingToolsSection } from "@/components/home/InifinityTools";
+import { InfiniteMovingToolsSection } from "@/components/home/InfiniteMovingToolsSection";
 import gifSrc from '@/public/cat.webp'; 
 import MindMapT from "@/components/home/mindMapT";
 
@@ -88,7 +88,8 @@ export default function Home() {
       </section>
       <section className="  flex items-center justify-center ">
         <div className="relative  w-full h-full z-10">
-          <MindMapT />
+          {/* <MindMapT /> */}
+          <InfiniteMovingToolsSection/>
         </div>
       </section>
       {/* <section className="  flex items-center justify-center my-5">

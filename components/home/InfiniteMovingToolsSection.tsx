@@ -28,36 +28,71 @@ import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { BrandJavaIcon, BrandKubernetesIcon, DigitaloceanIcon, IconBrandAnsible, IconBrandAxios, IconBrandCanva, IconBrandDotnet, IconBrandKubernetes, IconBrandNextauth, IconBrandNextui, IconBrandNginx, IconBrandOracle, IconBrandPostman, IconBrandSftp, IconBrandShadcn, IconBrandShell, IconBrandSqlite, IconBrandSqlserver, IconBrandSsl, SpringIcon } from "../icons";
 
-export function InfiniteMovingToolsSectionOld() {
+
+const AnimatedLogoCloud = ({ items }: {
+  items: {
+    description: string;
+    icon: any;
+    title: string;
+  }[];
+}) => {
   return (
-    <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <h1 className="m-3 text-4xl border-x border-t border-dashed yellowtail-regular px-12">Frameworks</h1>
-      <InfiniteMovingCards
-        items={frameworks}
-        direction="left"
-        speed="rrrslow"
-      />
+    <div className="w-full py-5  ">
+      <div className="mx-auto w-full px-4 md:px-8">
+        <div
+          className="group relative mt-6 flex gap-6 overflow-hidden p-2 border"
+          style={{
+            maskImage:
+              "linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)",
+          }}
+        >
+          {Array(5)
+            .fill(null)
+            .map((_, index) => (
+              <div
+                key={index}
+                className="flex shrink-0 animate-logo-cloud flex-row justify-around gap-6"
+              >
+                {items.map((item, key) => (
+                  <div key={key} className="flex flex-col items-center">
+                    
+                      <div className="text-4xl mb-2">{item.icon}</div>
+                    
+                    <p className="text-xs text-center dark:text-white">{item.title || item.title}</p>
+                  </div>
+                ))}
+              </div>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export function InfiniteMovingToolsSection() {
+  return (
+    <div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <h1 className="m-3 text-4xl border-x border-t border-dashed yellowtail-regular px-12 pt-3">Frameworks</h1>
+      <AnimatedLogoCloud items={frameworks} />
       <h1 className="m-3 text-4xl border-x border-dashed yellowtail-regular px-12">DevOps Utilities & Tools</h1>
-      <InfiniteMovingCards
-        items={devOps}
-        direction="left"
-        speed="rrrslow"
-      />
+      <AnimatedLogoCloud items={devOps} />
       <h1 className="m-3 text-4xl border-x border-dashed yellowtail-regular px-12">Databases</h1>
-      <InfiniteMovingCards
-        items={databases}
-        direction="left"
-        speed="rrslow"
-      />
+      <AnimatedLogoCloud items={databases} />
       <h1 className="m-3 text-4xl border-x border-dashed yellowtail-regular px-12">Libraries</h1>
-      <InfiniteMovingCards
-        items={libraries}
-        direction="left"
-        speed="rrslow"
-      />
+      <AnimatedLogoCloud items={libraries} />
     </div>
   );
 }
+
+// const frameworks = [
+//   { title: "Angular", icon: <IconBrandAngular /> },
+//   { title: "React", icon: <IconBrandReact /> },
+//   { title: "Next.js", icon: <IconBrandNextjs /> },
+//   { title: "Python Django", icon: <IconBrandPython /> },
+//   { title: ".NET", icon: <IconBrandDocker /> },
+//   { title: "Spring Boot", icon: <IconBrandCloudflare /> },
+// ];
+
 
 const frameworks = [
   {
@@ -105,7 +140,7 @@ const frameworks = [
     description:
       "Develop elegant PHP applications with an expressive and easy-to-use framework.",
     icon: <IconBrandLaravel />,
-  }, 
+  },
 ];
 const devOps = [
   {
@@ -150,7 +185,7 @@ const devOps = [
       "Orchestrate containerized applications for automated deployment, scaling, and management.",
     icon: <IconBrandKubernetes />, // Replace with actual icon component
   },
-  
+
   {
     title: "GitHub",
     description:
@@ -241,3 +276,22 @@ const libraries = [
   },
   // Add more as needed...
 ];
+// const devOps = [
+//   { title: "Docker", icon: <IconBrandDocker /> },
+//   { title: "Git", icon: <IconBrandGit /> },
+//   { title: "GitHub", icon: <IconBrandGithub /> },
+//   { title: "Vercel", icon: <IconBrandVercel /> },
+//   { title: "Cloudflare", icon: <IconBrandCloudflare /> },
+// ];
+
+// const databases = [
+//   { title: "MySQL", icon: <IconBrandMysql /> },
+//   { title: "SQLite", icon: <IconBrandFramerMotion /> },
+// ];
+
+// const libraries = [
+//   { title: "Redux", icon: <IconBrandRedux /> },
+//   { title: "Framer Motion", icon: <IconBrandFramerMotion /> },
+// ];
+
+export default InfiniteMovingToolsSection;
