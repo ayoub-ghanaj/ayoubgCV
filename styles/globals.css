@@ -48,3 +48,8 @@
 	font-weight: 500;
 	font-family: "Lemon", serif;
 }
+@layer base {
+  :root {
+		--radius: 0.5rem;
+	}
+}

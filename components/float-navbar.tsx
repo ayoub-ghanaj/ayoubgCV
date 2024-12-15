@@ -2,7 +2,7 @@
 import React from "react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { AboutIcon, EducationIcon, HomeIcon, ProjectsIcon, SkillsIcon, SoonIcon } from "./icons";
-import { IconMessage } from "@tabler/icons-react";
+import { IconMessage, IconTimeline } from "@tabler/icons-react";
 export function Floating_Nav() {
   const navItems = [
     {
@@ -11,9 +11,9 @@ export function Floating_Nav() {
       icon: <HomeIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Blog",
-      link: "/blog",
-      icon: <ProjectsIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      name: "Time Line",
+      link: "/tl",
+      icon: <IconTimeline className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "About",

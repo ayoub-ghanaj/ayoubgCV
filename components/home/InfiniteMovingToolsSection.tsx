@@ -51,7 +51,7 @@ const AnimatedLogoCloud = ({ items }: {
             .map((_, index) => (
               <div
                 key={index}
-                className="flex shrink-0 animate-logo-cloud flex-row justify-around gap-6"
+                className="flex shrink-0 animate-logo-cloud flex-row justify-around gap-6 min-w-11"
               >
                 {items.map((item, key) => (
                   <div key={key} className="flex flex-col items-center">
@@ -71,14 +71,17 @@ const AnimatedLogoCloud = ({ items }: {
 
 export function InfiniteMovingToolsSection() {
   return (
-    <div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <h1 className="m-3 text-4xl border-x border-t border-dashed yellowtail-regular px-12 pt-3">Frameworks</h1>
+    <div className="rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <h1 className="m-3 text-4xl  border-dashed yellowtail-regular px-12 pt-3">Frameworks</h1>
       <AnimatedLogoCloud items={frameworks} />
-      <h1 className="m-3 text-4xl border-x border-dashed yellowtail-regular px-12">DevOps Utilities & Tools</h1>
+      {/* <Separato */}
+      <h1 className="m-3 text-4xl  yellowtail-regular px-12">DevOps Utilities & Tools</h1>
       <AnimatedLogoCloud items={devOps} />
-      <h1 className="m-3 text-4xl border-x border-dashed yellowtail-regular px-12">Databases</h1>
+      
+      <h1 className="m-3 text-4xl  yellowtail-regular px-12">Databases</h1>
       <AnimatedLogoCloud items={databases} />
-      <h1 className="m-3 text-4xl border-x border-dashed yellowtail-regular px-12">Libraries</h1>
+      
+      <h1 className="m-3 text-4xl  yellowtail-regular px-12">Libraries</h1>
       <AnimatedLogoCloud items={libraries} />
     </div>
   );
@@ -106,7 +109,7 @@ const frameworks = [
     icon: <BrandJavaIcon />, // Replace with actual icon component
   },
   {
-    title: "Python Django",
+    title: "Python",
     description: "A high-level Python framework for rapid web development.",
     icon: <IconBrandPython />, // Replace with actual icon component
   },
@@ -131,7 +134,7 @@ const frameworks = [
     icon: <IconBrandDotnet />, // Replace with actual icon component
   },
   {
-    title: "Spring Boot",
+    title: "Spring",
     description: "A framework for creating production-ready applications in Java with minimal configuration.",
     icon: <SpringIcon />,
   },

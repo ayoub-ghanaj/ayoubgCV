@@ -9,7 +9,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { SkillsSection } from "@/components/home/skillz";
 import { ToolsSection } from "@/components/home/tools";
 import { InfiniteMovingToolsSection } from "@/components/home/InfiniteMovingToolsSection";
-import gifSrc from '@/public/cat.webp'; 
+import gifSrc from '@/public/cat.webp';
 import MindMapT from "@/components/home/mindMapT";
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
     <>
       {/* First Section with Sparkles */}
       <section className="relative h-[80vh]">
-        <div className="absolute inset-0 w-full h-full">
+        <div className="fixed inset-0 w-screen h-screen z-0">
           <SparklesCore
             id="tsparticlesfullpage"
             background="transparent"
@@ -46,7 +46,7 @@ export default function Home() {
             maxSize={1.4}
             particleDensity={100}
             className="w-full h-full"
-            particleColor={`${theme == "light" ? "#000000" : "#FFFFFF"}`}
+            particleColor={`${theme === "light" ? "#000000" : "#FFFFFF"}`}
           />
         </div>
         <div className="relative grid w-full h-full align-middle justify-center z-10">
@@ -54,7 +54,7 @@ export default function Home() {
           {/* First Column - Centered Text */}
           <div className="flex flex-col items-center justify-center">
             <div className="flex mb-3">
-              <label className="text-3xl sofia-regular"> hello , I am </label> &nbsp; &nbsp;&nbsp;<h1 className="text-3xl font-bold my-bold lemon-regular">Ayoub Ghanaj</h1>
+              <label className="text-3xl sofia-regular"> </label> &nbsp; &nbsp;&nbsp;<h1 className="text-3xl font-bold my-bold lemon-regular">Ayoub Ghanaj</h1>
             </div>
             <div className="flex mb-3">
               <h1 className="text-3xl font-bold outline my-bold p-2 ">Full-Stack {theme === "light" ? (<label className={`my-outline-b text-[2rem]`} > Developer </label>) : (<label className={`my-outline-w text-[2rem]`} > Developer </label>)}</h1>
@@ -89,7 +89,7 @@ export default function Home() {
       <section className="  flex items-center justify-center ">
         <div className="relative  w-full h-full z-10">
           {/* <MindMapT /> */}
-          <InfiniteMovingToolsSection/>
+          <InfiniteMovingToolsSection />
         </div>
       </section>
       {/* <section className="  flex items-center justify-center my-5">
@@ -102,7 +102,7 @@ export default function Home() {
       <section className="h-[20vh]  flex items-center justify-center">
         <h1 className="my-retro text-[5vw]  px-9 my-6"> {theme === "light" ? (<label className={`text-[2rem]`} >  <label className={`my-outline-b text-[2rem]`}>About</label> Me </label>) : (<label className={`text-[2rem] `} >  <label className={`my-outline-w text-[2rem]`}>About</label> Me </label>)}</h1>
       </section>
-      <section className=" h-[80vh] flex items-center justify-center px-8">
+      <section className=" min-h-[80vh] flex items-center justify-center px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
           {/* Left Part with GIF */}
           <div className="flex items-center justify-center">
@@ -120,11 +120,11 @@ export default function Home() {
           {/* Right Part with Text */}
           <div className="flex items-center">
             <p className="text-lg font-medium text-gray-800 dark:text-gray-300 lemon-regular">
-            Master’s student in Intelligent Mobile Systems with a focus on Data Science and Machine Learning. 
-            I bring solid experience in web development, IoT, and custom management systems.
-            Skilled in diverse programming languages and technologies, I’m eager to contribute
-            to data-driven projects and software development through an internship, 
-            enhancing my expertise and driving impactful solutions.
+              Master&apos;s student in Intelligent Mobile Systems with a focus on Data Science and Machine Learning.
+              I bring solid experience in web development, IoT, and custom management systems.
+              Skilled in diverse programming languages and technologies, I’m eager to contribute
+              to data-driven projects and software development through an internship,
+              enhancing my expertise and driving impactful solutions.
             </p>
           </div>
         </div>

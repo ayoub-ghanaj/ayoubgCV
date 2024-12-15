@@ -12,7 +12,7 @@ services:
    cv:
       container_name: cv
       restart: unless-stopped
-      image: cv:0.0.1
+      image: cv:0.0.2
 
    nginx:
       container_name: nginx
